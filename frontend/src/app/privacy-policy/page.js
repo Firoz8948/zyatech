@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./PrivacyPolicy.module.css";
 
 export const metadata = {
@@ -13,8 +14,13 @@ export default function PrivacyPolicyPage() {
       <nav className={styles.nav}>
         <div className={`container ${styles.navInner}`}>
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoIcon}>Z</span>
-            <span className={styles.logoText}>Zyatech</span>
+            <Image
+              src="/zyatech-logo.svg"
+              alt="Zyatech Logo"
+              width={130}
+              height={38}
+              className={styles.logoImage}
+            />
           </Link>
           <Link href="/" className={styles.backLink}>
             ← Back to Home
@@ -113,7 +119,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>
               <strong>Email:</strong>{" "}
-              <a href="mailto:zyatechpvtltd@gmail.com">zyatechpvtltd@gmail.com</a>
+              <a href="mailto:zyatechpvt@gmail.com">zyatechpvt@gmail.com</a>
             </p>
             <p>
               <strong>Company:</strong> Zyatech Private Limited

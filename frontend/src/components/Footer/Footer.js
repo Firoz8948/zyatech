@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -10,8 +11,13 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoIcon}>Z</span>
-              <span className={styles.logoText}>Zyatech</span>
+              <Image
+                src="/zyatech-logo.svg"
+                alt="Zyatech Logo"
+                width={130}
+                height={38}
+                className={styles.logoImage}
+              />
             </div>
             <p className={styles.brandDesc}>
               Innovative technology solutions crafted to simplify everyday life.
@@ -38,12 +44,18 @@ export default function Footer() {
           <div className={styles.linksGroup}>
             <h4 className={styles.linksTitle}>Contact</h4>
             <a
-              href="mailto:zyatechpvtltd@gmail.com"
+              href="mailto:zyatechpvt@gmail.com"
               className={styles.link}
             >
-              zyatechpvtltd@gmail.com
+              zyatechpvt@gmail.com
             </a>
-            <span className={styles.linkStatic}>Lalganj, UP, India</span>
+            <a
+              href="tel:+919129362763"
+              className={styles.link}
+            >
+              +91 9129362763
+            </a>
+            <span className={styles.linkStatic}>Lalganj Ajhara, UP, India</span>
           </div>
         </div>
 

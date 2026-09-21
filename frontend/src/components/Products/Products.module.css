@@ -90,6 +90,13 @@
   z-index: 2;
 }
 
+.appIconImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
 .appEmoji {
   font-size: 2.5rem;
 }
@@ -101,6 +108,10 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 212, 255, 0.1);
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.glowPurple {
+  border-color: rgba(139, 92, 246, 0.15);
 }
 
 /* Product Info */
@@ -117,12 +128,26 @@
   margin-bottom: 16px;
 }
 
+.badgeUpcoming {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-purple);
+}
+
 .liveDot {
   width: 6px;
   height: 6px;
   background: var(--success);
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.upcomingDot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-purple);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
@@ -138,7 +163,37 @@
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+/* Product Meta */
+.productMeta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.productLink {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.productLink:hover {
+  opacity: 0.8;
+}
+
+.productOwner {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 4px 12px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-full);
 }
 
 /* Features */
@@ -159,6 +214,49 @@
 .feature svg {
   color: var(--accent-cyan);
   flex-shrink: 0;
+}
+
+/* Launch Locations */
+.launchLocations {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-glass);
+}
+
+.launchLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.locationTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.locationTag {
+  padding: 5px 14px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.locationTag:hover {
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
+}
+
+/* Fagson Card */
+.cardFagson {
+  margin-top: 32px;
 }
 
 /* Coming Soon */
@@ -203,5 +301,17 @@
 
   .productFeatures {
     align-items: center;
+  }
+
+  .productMeta {
+    justify-content: center;
+  }
+
+  .launchLocations {
+    text-align: center;
+  }
+
+  .locationTags {
+    justify-content: center;
   }
 }

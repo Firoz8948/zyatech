@@ -39,29 +39,31 @@
 /* Cards Grid */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .contactCard {
-  padding: 36px 28px;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-lg);
-  transition: all var(--transition-normal);
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.contactCard:hover {
-  background: var(--bg-glass-hover);
-  border-color: var(--border-glass-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+.contactCardLink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  margin: -2rem;
+  padding: 2rem;
+  width: calc(100% + 4rem);
+}
+
+.contactCard:hover .cardAction {
+  gap: 10px;
 }
 
 .cardIcon {
@@ -79,6 +81,11 @@
 .iconPurple {
   background: var(--accent-purple-dim);
   color: var(--accent-purple);
+}
+
+.iconBlue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
 }
 
 .iconGreen {
@@ -112,9 +119,7 @@
   transition: gap var(--transition-fast);
 }
 
-.contactCard:hover .cardAction {
-  gap: 10px;
-}
+
 
 .cardHint {
   font-size: 0.8rem;
@@ -135,6 +140,10 @@
 
 .animateIn:nth-child(3) {
   transition-delay: 0.2s;
+}
+
+.animateIn:nth-child(4) {
+  transition-delay: 0.3s;
 }
 
 .visible.animateIn,

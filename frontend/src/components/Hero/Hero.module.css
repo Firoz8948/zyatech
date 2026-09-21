@@ -8,6 +8,19 @@
   padding-top: 80px;
 }
 
+/* GhostFibers WebGL Background */
+.ghostFibersBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
 /* Background Orbs */
 .bgOrbs {
   position: absolute;
@@ -110,6 +123,13 @@
 
 .titleLine {
   display: block;
+}
+
+.heroLogo {
+  height: clamp(60px, 10vw, 120px);
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
 }
 
 .titleAccent {

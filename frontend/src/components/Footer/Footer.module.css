@@ -33,24 +33,10 @@
   margin-bottom: 16px;
 }
 
-.logoIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  background: var(--accent-gradient);
-  border-radius: var(--radius-sm);
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--bg-primary);
-}
-
-.logoText {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.2rem;
+.logoImage {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brandDesc {

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import SpotlightCard from "@/components/SpotlightCard/SpotlightCard";
+import BlurText from "@/components/BlurText/BlurText";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -29,15 +31,15 @@ export default function About() {
       <div className="container">
         <div className={styles.sectionHeader}>
           <span className={`${styles.label} ${styles.animateIn}`}>About Us</span>
-          <h2 className={`${styles.heading} ${styles.animateIn}`}>
-            Driven by <span className="gradient-text">Innovation</span>
+          <h2 className={styles.heading}>
+            <BlurText text="Driven by Innovation" delay={150} animateBy="words" direction="top" />
           </h2>
         </div>
 
         <div className={styles.content}>
           <div className={`${styles.textBlock} ${styles.animateIn}`}>
             <p className={styles.description}>
-              <strong>Zyatech Private Limited</strong> is a technology company focused
+              <strong>Zyatech Private Limited</strong> is a technology company owned by <strong>Firoz Khan</strong> focused
               on building innovative digital products that simplify and enhance
               everyday life. We believe in leveraging modern technology to solve
               real-world problems and create solutions that people love to use.
@@ -50,7 +52,7 @@ export default function About() {
           </div>
 
           <div className={styles.values}>
-            <div className={`${styles.valueCard} ${styles.animateIn}`}>
+            <SpotlightCard className={`${styles.valueCard} ${styles.animateIn}`} spotlightColor="rgba(0, 212, 255, 0.2)">
               <div className={styles.valueIcon}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -62,9 +64,9 @@ export default function About() {
               <p className={styles.valueDesc}>
                 We push boundaries and embrace cutting-edge technology to deliver exceptional products.
               </p>
-            </div>
+            </SpotlightCard>
 
-            <div className={`${styles.valueCard} ${styles.animateIn}`}>
+            <SpotlightCard className={`${styles.valueCard} ${styles.animateIn}`} spotlightColor="rgba(139, 92, 246, 0.2)">
               <div className={`${styles.valueIcon} ${styles.iconPurple}`}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -77,9 +79,9 @@ export default function About() {
               <p className={styles.valueDesc}>
                 Our products are built to serve and uplift local communities across India.
               </p>
-            </div>
+            </SpotlightCard>
 
-            <div className={`${styles.valueCard} ${styles.animateIn}`}>
+            <SpotlightCard className={`${styles.valueCard} ${styles.animateIn}`} spotlightColor="rgba(16, 185, 129, 0.2)">
               <div className={`${styles.valueIcon} ${styles.iconGreen}`}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -90,7 +92,7 @@ export default function About() {
               <p className={styles.valueDesc}>
                 We maintain the highest standards in every line of code and every design decision.
               </p>
-            </div>
+            </SpotlightCard>
           </div>
         </div>
       </div>
